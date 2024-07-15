@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { ethers } from 'ethers'
 import customTokenAbi from '../contract/CustomToken.json'
 
-const contractAddress = '0xf6B9c31a9Ab2049A23aaf4f984cF5e337f7A8EA7'; // Update with your deployed contract address
+const contractAddress = '0xB867c98dC98113B4CE3D87e738c42BE090843D15'; // Update with your deployed contract address
 const abi = customTokenAbi.abi;
 
 function App() {
@@ -108,13 +108,13 @@ function App() {
       <div className="mx-auto max-w-screen-xl py-16 px-4 sm:py-24 sm:px-6 lg:px-8">
         <div className="text-center">
           <div className="mb-12">
-            <h1 className="my-3 text-3xl font-bold text-pink-400 sm:text-5xl sm:tracking-tight lg:text-6xl">Core Dao DApp</h1>
+            <h1 className="my-3 text-3xl font-bold text-red-400 sm:text-5xl sm:tracking-tight lg:text-6xl">Core Dao DApp</h1>
           </div>
           {currentAccount ? (
             <div>
               <p className="text-xl text-white">Connected Account: {currentAccount}</p>
               <p className="text-xl text-white">Balance: {balance} tokens</p>
-              <button onClick={mintTokens} className="btn-primary mt-4 bg-pink-400 hover:bg-pink-400">Mint 100 Tokens</button>
+              <button onClick={mintTokens} className="btn-primary mt-4 bg-red-400 hover:bg-red-400">Mint 100 Tokens</button>
               <div className="mt-8">
                 <input
                   type="text"
@@ -130,11 +130,11 @@ function App() {
                   onChange={(e) => setTransferAmount(Number(e.target.value))}
                   className="rounded-r-none border-2 border-solid border-gray-300 py-1 px-2 h-10"
                 />
-                <button onClick={transferTokens} className="btn-primary rounded-l-none w-40 bg-pink-400 hover:bg-pink-400">Transfer</button>
+                <button onClick={transferTokens} className="btn-primary rounded-l-none w-40 bg-red-400 hover:bg-red-400">Transfer</button>
               </div>
             </div>
           ) : (
-            <button onClick={connectWalletHandler} className="btn-primary mt-10 w-40 rounded text-white bg-pink-400">Connect Wallet</button>
+            <button onClick={connectWalletHandler} className="btn-primary mt-10 w-40 rounded text-white bg-red-400">Connect Wallet</button>
           )}
         </div>
       </div>
